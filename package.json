@@ -1,0 +1,99 @@
+{
+  "name": "mailto-link",
+  "version": "0.1.0",
+  "description": "Mailto link generator.",
+  "private": true,
+  "scripts": {
+    "build:clean": "npm run clean",
+    "build:webpack": "webpack --config webpack/webpack.config.prod.js",
+    "build": "cross-env NODE_ENV=production npm-run-all build:*",
+    "start": "webpack serve --config webpack/webpack.config.dev.js",
+    "clean": "rimraf dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gasatrya/mailto-link.git"
+  },
+  "keywords": [
+    "mailto",
+    "webpack",
+    "tailwind",
+    "generator"
+  ],
+  "author": "Ga Satrya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gasatrya/mailto-link/issues"
+  },
+  "homepage": "https://github.com/gasatrya/mailto-link#readme",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.20.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "html-loader": "^4.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.7.2",
+    "rimraf": "^3.0.2",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.1.6",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3",
+    "webpack-merge": "^5.8.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf",
+    "overrides": [
+      {
+        "files": [
+          "*.html"
+        ],
+        "options": {
+          "tabWidth": 4
+        }
+      },
+      {
+        "files": [
+          "*.css",
+          "*.scss"
+        ],
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
+  },
+  "postcss": {
+    "map": false,
+    "plugins": {
+      "postcss-preset-env": {},
+      "tailwindcss": {}
+    }
+  }
+}

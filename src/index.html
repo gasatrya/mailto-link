@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mailto Link Generator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="header my-10 md:my-14">
+            <div
+                class="header__container lg:max-w-1000 mx-auto flex md:flex-row flex-col justify-between items-center px-4 md:px-8 lg:px-0"
+            >
+                <div class="logo lg:mb-0 mb-4">
+                    <h2 class="logo__title text-xl font-semibold">Gasatrya</h2>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__lists">
+                        <li class="nav__list">
+                            <a class="nav__link text-xl text-white" href="https://gasatrya.dev/" target="_blank">
+                                gasatrya.dev
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="md:max-w-1000 mx-auto px-4 md:px-8 lg:px-0">
+            <section class="intro lg:w-3/4 mx-auto text-center">
+                <h1 class="text-3xl md:text-6xl font-bold mb-4">Mailto Link Generator</h1>
+                <p class="text-lg md:text-2xl text-slate-300">
+                    Generate mailto links with a subject, body, cc and bcc.
+                </p>
+            </section>
+
+            <form class="lg:w-1/2 mx-auto md:my-12">
+                <p class="mb-3">
+                    <label for="to" class="form-label text-lg font-semibold"
+                        >To <span class="text-red-500">*</span></label
+                    >
+                    <input type="email" class="form-input bg-dark-200 border-dark-300 w-full rounded mt-2" id="to" />
+                </p>
+                <p class="mb-3">
+                    <label for="cc" class="form-label text-lg font-semibold">Cc</label>
+                    <input type="email" class="form-input bg-dark-200 border-dark-300 w-full rounded mt-2" id="cc" />
+                </p>
+                <p class="mb-3">
+                    <label for="bcc" class="form-label text-lg font-semibold">Bcc</label>
+                    <input type="email" class="form-input bg-dark-200 border-dark-300 w-full rounded mt-2" id="bcc" />
+                </p>
+                <p class="mb-3">
+                    <label for="subject" class="form-label text-lg font-semibold">Subject</label>
+                    <input
+                        type="text"
+                        class="form-input bg-dark-200 border-dark-300 w-full rounded mt-2"
+                        id="subject"
+                    />
+                </p>
+                <p class="mb-5">
+                    <label for="body" class="form-label text-lg font-semibold">Body</label>
+                    <textarea
+                        class="form-input bg-dark-200 border-dark-300 w-full rounded mt-2 resize-none"
+                        id="body"
+                        cols="30"
+                        rows="5"
+                    ></textarea>
+                </p>
+                <button
+                    type="button"
+                    class="px-6 py-2 font-semibold text-l bg-accent hover:bg-opacity-80 text-white rounded transition-all duration-200"
+                    id="generate"
+                >
+                    Generate Link
+                </button>
+            </form>
+
+            <section class="result lg:w-1/2 mx-auto mb-12">
+                <p class="mb-5">
+                    <label for="link" class="form-label text-lg font-semibold">Mailto Link</label>
+                    <textarea
+                        class="form-input bg-dark-300 border-dark-300 w-full rounded mt-2 resize-none"
+                        id="link"
+                        cols="30"
+                        rows="3"
+                        readonly
+                    ></textarea>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

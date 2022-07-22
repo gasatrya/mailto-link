@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply text-white;
+}
+
+body {
+  background: linear-gradient(to right, #15202b 40%, #0f161d);
+}
+
+a:not(.btn) {
+  background: linear-gradient(to right, theme("colors.accent"), theme("colors.accent")),
+    linear-gradient(to right, theme("colors.accent"), theme("colors.accent"));
+  background-size: 100% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 200ms, color 200ms;
+  text-decoration: none;
+}
+
+a:not(.btn):hover {
+  background-size: 0 100%, 100% 100%;
+  color: theme("colors.white");
+}
